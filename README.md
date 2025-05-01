@@ -98,7 +98,7 @@ base_path = r"your\local\path\to\csvs"
 Then run:
 
 ```bash
-python f1_classifier.py
+python train.py
 ```
 
 ---
@@ -107,14 +107,11 @@ python f1_classifier.py
 
 ```text
 .
-├── f1_classifier.py
+├── src
+      └──train.py
 ├── README.md
 └── data/
-    ├── pit_stops.csv
-    ├── results.csv
-    ├── drivers.csv
-    ├── races.csv
-    └── status.csv
+    └── code to implement kaggle data.py 
 ```
 
 ---
