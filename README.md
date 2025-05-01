@@ -6,7 +6,7 @@ This project uses Formula 1 World Championship data to predict whether a driver 
 
 ## 📂 Dataset
 
-The data used is from [Kaggle's Formula 1 World Championship (1950 - 2020)](https://www.kaggle.com/rohanrao/formula-1-world-championship-1950-2020).
+The data used is from [Kaggle's Formula 1 World Championship (1950 - 2024)](https://www.kaggle.com/rohanrao/formula-1-world-championship-1950-2020).
 
 Required CSV files:
 - `pit_stops.csv`
