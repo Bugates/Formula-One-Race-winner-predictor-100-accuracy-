@@ -132,7 +132,6 @@ else:
     miami_X = (miami_X - X_mean) / X_std
     miami_df['win_prob'] = predict_proba(miami_X, W, b)
 
-    # Safely ensure 'driverRef' exists
     if 'driverRef' not in miami_df.columns or miami_df['driverRef'].isnull().all():
         miami_df = miami_df.merge(drivers[['driverId', 'driverRef']].drop_duplicates(), on='driverId', how='left')
         miami_df['driverRef'] = miami_df['driverRef'].fillna(miami_df['driverId'].astype(str))
