@@ -48,7 +48,10 @@ df['pit_count'] = df['stop'].astype(int)
 df['duration_ms'] = df['milliseconds_x']
 df['target'] = (df['positionOrder'] == 1).astype(int)
 
-features = ['pit_count', 'points', 'laps', 'duration_ms', 'age']
+# Selecting all columns for features (excluding non-numeric columns or encoded categorical ones)
+features = df.select_dtypes(include=[np.number]).columns.tolist()
+features.remove('target')  # Remove target column from features
+
 X = df[features].fillna(0).values
 Y = df['target'].values.reshape(-1, 1)
 
@@ -98,7 +101,6 @@ print("\nClassification Report:\n", classification_report(Y_test, Y_pred))
 print("\nFeature Coefficients:")
 for f, w in zip(features, W.flatten()):
     print(f"{f}: {w:.4f}")
-
 
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, roc_curve, auc
