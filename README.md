@@ -1,10 +1,10 @@
-# 🏎️ Formula 1 Winner Classification
+# Formula 1 Winner Classification
 
 This project uses Formula 1 World Championship data to predict whether a driver finishes **first** in a race based on features like pit stop duration, laps, and age. A simple **logistic regression** model is implemented from scratch in NumPy, with custom train/test splitting based on race grouping and gained 100% accuracy.
 
 ---
 
-## 📂 Dataset
+## Dataset
 
 The data used is from [Kaggle's Formula 1 World Championship (1950 - 2024)](https://www.kaggle.com/rohanrao/formula-1-world-championship-1950-2020).
 
@@ -19,7 +19,7 @@ Ensure all files are located in the directory specified by the `base_path` varia
 
 ---
 
-## 🧠 Features Used
+## Features Used
 
 - `pit_count`: Number of pit stops
 - `points`: Driver's points in the race
@@ -31,7 +31,7 @@ Target: Whether the driver **finished first** in the race (`1` if yes, else `0`)
 
 ---
 
-## 🛠️ How It Works
+## How It Works
 
 1. **Data Preparation**:
    - Merges multiple datasets on race and driver IDs.
@@ -51,7 +51,7 @@ Target: Whether the driver **finished first** in the race (`1` if yes, else `0`)
 
 ---
 
-## 📊 Sample Output
+## Sample Output
 
 ```
 Epoch 0 - Loss: 0.6931
@@ -70,7 +70,7 @@ age:       -0.02
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 - Python 3.7+
 - numpy
@@ -87,7 +87,7 @@ pip install numpy pandas matplotlib seaborn scikit-learn
 
 ---
 
-## 🚀 Run the Code
+## Run the Code
 
 Edit the `base_path` variable to point to the directory where the CSVs are stored:
 
@@ -103,7 +103,7 @@ python train.py
 
 ---
 
-## 📁 File Structure
+## File Structure
 
 ```text
 .
